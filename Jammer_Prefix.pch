@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'Jammer' target in the 'Jammer' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+
+// Uncomment this to log a lot more.
+// TODO automatically undefine in release builds
+#define DEBUG
+
+#ifdef DEBUG
+	#define LOG(str, ...) NSLog(str, ## __VA_ARGS__)
+#else
+	#define LOG(str, ...) 
+#endif
